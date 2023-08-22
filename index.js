@@ -44,7 +44,7 @@ function addGamesToPage(games) {
                  gameCard.innerHTML =
                 `<h2>${game.name}</h2>
                 <img src="${game.img}" class="game-img" />
-                <p>Description: ${game.description}</p>
+                <p> ${game.description}</p>
                 `;
             
                 // append the game to the games-container
