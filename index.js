@@ -209,7 +209,7 @@ newElement.textContent =
 `A total of $${raisedAmount.toLocaleString()} 
 has been raised for ${totalGames} games. Currently,
  ${totalUnfund} game${totalUnfund !== 1 ? 's are' : ' is'}
-unfunded.`;
+unfunded. We need your help to fund these amazing games!`;
 
 descriptionContainer.appendChild(newElement);
 
