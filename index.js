@@ -243,3 +243,24 @@ firstGameContainer.appendChild(firstGameNameElement);
 secondGameContainer.appendChild(secondGameNameElement);
 
 
+//  references to the search input and search button
+const searchInput = document.querySelector(".search-bar input");
+const searchButton = document.querySelector(".search-bar button");
+
+//Event listener for the search button
+searchButton.addEventListener("click", searchGame);
+
+// Function to search for a game and display the game card
+function searchGame() {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    // Filter games 
+    const matchingGames = GAMES_JSON.filter(game =>
+        game.name.toLowerCase().includes(searchTerm)
+    );
+
+    // Clear the games container and add matching games
+    deleteChildElements(gamesContainer);
+    addGamesToPage(matchingGames);
+}
+

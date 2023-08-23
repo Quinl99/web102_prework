@@ -11,12 +11,33 @@ body {
 
 .header {
     display: flex;
+    /* Added to create space between items in header */
+    justify-content: space-between; 
     background-color: lightblue;
     padding: 1%;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+}
+
+.header-text {
+    margin-left: -655px; 
+}
+
+
+
+.search-bar {
+    display: flex; 
+    margin-right: 20px;
+    align-items: center; 
+}
+
+/* Makes search bar bigger */
+.search-bar input {
+    margin-right: 5px;
+    padding: 7px 15px;
+
 }
 
 .stats-container {
@@ -76,10 +97,25 @@ body {
     text-align: center;
 }
 
+#sear{
+    
+    border: none;
+    padding: 7px 15px;
+    margin: 1%;
+    border-radius: 7px; 
+    cursor: pointer;
+}
 button {
     font-family: 'Cabin';
     border: none;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+/* Reduces margin for header text */
+@media (max-width: 768px) {
+    .header-text {
+        margin-left: 5px; 
+    }
 }
